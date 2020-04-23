@@ -37,16 +37,16 @@
       this.label1 = new System.Windows.Forms.Label();
       this.timer1 = new System.Windows.Forms.Timer(this.components);
       this.buttonPopulate = new System.Windows.Forms.Button();
-      this.button2 = new System.Windows.Forms.Button();
+      this.buttonSetInterval = new System.Windows.Forms.Button();
       this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-      this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+      this.menuStripMain = new System.Windows.Forms.MenuStrip();
       this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.populateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-      this.menuStrip1.SuspendLayout();
+      this.menuStripMain.SuspendLayout();
       this.SuspendLayout();
       // 
       // startButton
@@ -92,11 +92,12 @@
       this.mainPanel.Name = "mainPanel";
       this.mainPanel.Size = new System.Drawing.Size(1807, 694);
       this.mainPanel.TabIndex = 3;
-      //this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
       // 
       // label1
       // 
       this.label1.AutoSize = true;
+      this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
+      this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
       this.label1.Location = new System.Drawing.Point(499, 31);
       this.label1.Name = "label1";
       this.label1.Size = new System.Drawing.Size(59, 13);
@@ -118,15 +119,15 @@
       this.buttonPopulate.Visible = false;
       this.buttonPopulate.Click += new System.EventHandler(this.ButtonPopulate_Click);
       // 
-      // button2
+      // buttonSetInterval
       // 
-      this.button2.Location = new System.Drawing.Point(717, 26);
-      this.button2.Name = "button2";
-      this.button2.Size = new System.Drawing.Size(79, 23);
-      this.button2.TabIndex = 4;
-      this.button2.Text = "Set Interval";
-      this.button2.UseVisualStyleBackColor = true;
-      this.button2.Click += new System.EventHandler(this.ButtonSetInterval_Click);
+      this.buttonSetInterval.Location = new System.Drawing.Point(717, 26);
+      this.buttonSetInterval.Name = "buttonSetInterval";
+      this.buttonSetInterval.Size = new System.Drawing.Size(79, 23);
+      this.buttonSetInterval.TabIndex = 4;
+      this.buttonSetInterval.Text = "Set Interval";
+      this.buttonSetInterval.UseVisualStyleBackColor = true;
+      this.buttonSetInterval.Click += new System.EventHandler(this.ButtonSetInterval_Click);
       // 
       // numericUpDown1
       // 
@@ -145,18 +146,18 @@
             0,
             0});
       // 
-      // menuStrip1
+      // menuStripMain
       // 
-      this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+      this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
             this.startToolStripMenuItem,
             this.populateToolStripMenuItem1,
             this.restartToolStripMenuItem});
-      this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-      this.menuStrip1.Name = "menuStrip1";
-      this.menuStrip1.Size = new System.Drawing.Size(1807, 24);
-      this.menuStrip1.TabIndex = 5;
-      this.menuStrip1.Text = "menuStrip1";
+      this.menuStripMain.Location = new System.Drawing.Point(0, 0);
+      this.menuStripMain.Name = "menuStripMain";
+      this.menuStripMain.Size = new System.Drawing.Size(1807, 24);
+      this.menuStripMain.TabIndex = 5;
+      this.menuStripMain.Text = "menuStrip1";
       // 
       // fichierToolStripMenuItem
       // 
@@ -200,23 +201,24 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1807, 718);
       this.Controls.Add(this.numericUpDown1);
-      this.Controls.Add(this.button2);
+      this.Controls.Add(this.buttonSetInterval);
       this.Controls.Add(this.restartButton);
       this.Controls.Add(this.buttonPopulate);
       this.Controls.Add(this.label1);
       this.Controls.Add(this.mainPanel);
       this.Controls.Add(this.geneBox);
       this.Controls.Add(this.startButton);
-      this.Controls.Add(this.menuStrip1);
+      this.Controls.Add(this.menuStripMain);
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-      this.MainMenuStrip = this.menuStrip1;
+      this.MainMenuStrip = this.menuStripMain;
       this.Name = "FormMain";
       this.Text = "Conway\'s Game of Life";
+      this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
       this.Load += new System.EventHandler(this.Form1_Load);
       ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-      this.menuStrip1.ResumeLayout(false);
-      this.menuStrip1.PerformLayout();
+      this.menuStripMain.ResumeLayout(false);
+      this.menuStripMain.PerformLayout();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -231,9 +233,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button buttonPopulate;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonSetInterval;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripMain;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem;
